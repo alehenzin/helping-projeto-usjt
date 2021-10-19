@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Helping</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"crossorigin="anonymous"/>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />  
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <nav class="navbar navbar-light bg-primary">
+        <a class="navbar-brand" href="/">
+            <img src="/img/logo.pn">
+        </a>
+    </nav>
+<hr>
+
+
+    <div class="container">
+        <div class="card" id="formulario-pergunta">
+            <div class="card-header">
+                <h3>Cadastro de Parceiros</h3>
+            </div>
+            <div class="card-body">
+                <form action="/salvarentidade" method="POST">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="inputName">Nome</label>
+                            <input type="text" name="nome" id="inputName" class="form-control"  required>
+                        </div>
+            
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" name="email" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Senha</label>
+                            <input type="password" class="form-control" id="inputPassword4" name="senha" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputAddress">Endereço</label>
+                            <input type="text" class="form-control" id="inputAddress" name="endereco" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputAddress">Telefone</label>
+                            <input type="text" class="form-control" id="inputAddress" name="telefone" required>
+                        </div>
+
+            
+                     </div>
+                    <div class="form-row">
+                        <select class="form-control col-md-6" name="Zona" >
+                            <label for="inputAddress">Zona</label>
+                            <option>Zona Sul</option>
+                            <option>Zona Leste</option>
+                            <option>Zona Norte</option>
+                            <option>Zona Oeste</option>
+                          </select>
+                          <select class="form-control col-md-6"  name="tipo"   >
+                            <label for="inputAddress">Tipo</label>
+                            <option>Paróquia</option>
+                            <option>ONG</option>
+                            <option>CUFA</option>
+                          </select>
+                    </div>
+                    
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

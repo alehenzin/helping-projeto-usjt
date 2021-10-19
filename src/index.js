@@ -55,6 +55,25 @@ app.post("/salvarentidade",(req, res) => {
     });
 });
 
+/*app.post("/salvarevento",(req, res) => {
+
+  var nome = req.body.nome;
+  var dt_inicio = req.body.dt_inicio;
+  var dt_final = req.body.dt_final;
+  var desc = req.body.desc;
+
+
+  evento.create({
+      nome: nome,
+      dt_inicio: dt_inicio,
+      dt_final: dt_final,
+      desc: desc,
+
+  }).then(() => {
+      res.redirect("/");
+  });
+});*/
+
 app.listen(3000, () => 
 console.log('Servidor iniciado na porta 3000')
 );

@@ -11,7 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 10;
-    background: #92badd;
+    background: #007bff;
 }
 
 .container{
@@ -35,7 +35,7 @@ body{
     bottom: 0;
     height: 3px;
     width: 30px;
-    background: linear-gradient(135deg, #56baed, #fff);
+    /*background: linear-gradient(135deg, #56baed, #fff);*/
 }
 
 .container form .user-details{
@@ -121,15 +121,18 @@ form .button input{
     height: 100%;
     width: 100%;
     outline: none;
+    color:#fff;
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
     letter-spacing: 1px;
-    background: linear-gradient(135deg, #92badd, #fff);
+    /*background: linear-gradient(135deg, #92badd, #fff);*/
+    background: #007bff;
 }
 
 form .button input:hover{
-    background: linear-gradient(-135deg, #92badd, #fff)
+    /*background: linear-gradient(-135deg, #92badd, #fff)*/
+    background: #007bff;
 }
 
 @media (max-width: 584px){

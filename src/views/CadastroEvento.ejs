@@ -1,83 +1,78 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title> Cadastro de Eventos </title>
-    <!--<link rel="stylesheet" type="text/css" href="css/cadastro-de-eventos.css"> -->
-    <link rel="stylesheet" href="/css/CadastroEvento.css">
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Helping</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-light bg-primary">
+      <a class="navbar-brand" href="/">
+          <img src="/img/logo.pn">
+      </a>
+  </nav>
+<hr>
+
     <div class="container">
-        <div class="title"> Cadastro de Ações Sociais </div>
-        <form action="#">
-            <div class="user-details">
-                <div class="input-box">
-                    <span class="details">Nome completo</span>
-                    <input type="text" placeholder="Coloque seu nome completo" required>
-                </div>
+      <div class="card" id="formulario-pergunta">
+        <div class="card-header">
+          <h3> Cadastro de Ação Social </h3>
+        </div>
+        <div class="card-body">
 
-                <div class="input-box">
-                    <span class="details">Email</span>
-                    <input type="text" placeholder="Coloque seu email" required>
-                </div>
-
-                <div class="input-box">
-                    <span class="details">Telefone</span>
-                    <input type="text" placeholder="Coloque seu numero de telefone Ex... (11)22224444" required>
-                </div>
-
-                <div class="input-box">
-                    <span class="details">Endereço do Evento</span>
-                    <input type="text" placeholder="Coloque o endereço do evento" required>
-                </div>
-
-                <div class="input-box">
-                    <span class="details">CEP</span>
-                    <input type="text" placeholder="Informe o CEP do endereço" required>
-                </div>
-
-                <div class="input-box">
-                    <span class="details">Data do Evento</span>
-                    <input type="text" placeholder="Informe a cada do evento" required>
-                </div>
-
-                <div class="input-box">
-                    <span class="details">Número de pessoas</span>
-                    <input type="text" placeholder="Informe o número máximo de pessoas" required>
-                </div>
-
-                <div class="input-box">
-                    <span class="details">Classificação de Evento</span>
-                    <input type="text" placeholder="Classifique o evento" required>
-                </div>
+          <form class="row g-3">
+            <div class="col-12">
+              <label for="inputName" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="inputName">
             </div>
-           <!-- <div class="gender-details">
-                <input type="radio" name="gender" id="dot-1">
-                <input type="radio" name="gender" id="dot-2">
-                <input type="radio" name="gender" id="dot-3">
-                <span class="gender-title">Gender</span>
-                <div class="category">
-                    <label for="dot-1">
-                        <span class="dot one"></span>
-                        <span class="gender">Male</span>
-                    </label>
 
-                    <label for="dot-2">
-                        <span class="dot two"></span>
-                        <span class="gender">Female</span>
-                    </label>
-
-                    <label for="dot-3">
-                        <span class="dot three"></span>
-                        <span class="gender">Prefer not to say</span>
-                    </label>
-                </div>
-            </div> -->
-            <div class="button">
-                <input type="submit" value="Register">
+            <div class="col-md-6">
+              <label for="inputAddress" class="form-label">Data Inicial</label>
+              <input type="text" class="form-control" id="inputAddress">
             </div>
-        </form>
-        
+
+            <div class="col-md-6">
+              <label for="inputAddress" class="form-label">Data Final</label>
+              <input type="text" class="form-control" id="inputAddress">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <!--<div class="input-group date">
+              <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+            </div>-->
+
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
     </div>
-</body>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+               
+  </body>
 </html>

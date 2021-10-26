@@ -4,6 +4,7 @@ const app = express();
 const sequelize = require("./database/database.js");
 const entidade = require("./database/Entidade");
 const bodyParser = require("body-parser");
+const evento = require("./database/evento.js");
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -17,7 +18,15 @@ sequelize
   }).catch((msgErro) => {
     console.log("Erro ao conectar com DB!", error)
   })
-
+  app.get("/",(req, res) => {
+    evento.findAll({ raw: true, order:[
+        ['id','DESC'] // ASC = Crescente || DESC = Decrescente
+    ]}).then(evento => {
+        res.render("index",{
+          evento: evento
+        });
+    });
+});
   app.get('/CadastroEvento', function(req, res){
     res.render('CadastroEvento');
 });
@@ -54,25 +63,6 @@ app.post("/salvarentidade",(req, res) => {
         res.redirect("/");
     });
 });
-
-/*app.post("/salvarevento",(req, res) => {
-
-  var nome = req.body.nome;
-  var dt_inicio = req.body.dt_inicio;
-  var dt_final = req.body.dt_final;
-  var desc = req.body.desc;
-
-
-  evento.create({
-      nome: nome,
-      dt_inicio: dt_inicio,
-      dt_final: dt_final,
-      desc: desc,
-
-  }).then(() => {
-      res.redirect("/");
-  });
-});*/
 
 app.listen(3000, () => 
 console.log('Servidor iniciado na porta 3000')

@@ -28,5 +28,5 @@ const evento = connection.define('eventos', {
     }
 })
 
-// evento.sync({force: false});
+ evento.sync({force: false});
 module.exports = evento;

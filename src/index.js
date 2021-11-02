@@ -39,6 +39,145 @@ app.get('/login', function(req, res){
     res.render('loginusuario');
 });
 
+
+//FILTROS POR ZONA
+
+app.get("/eventobyzonaleste",(req ,res) => {
+  const LESTE = 'LESTE'
+  evento.findAll({
+      where: {zona: LESTE}
+  }).then(evento => {
+      if(evento != undefined){ 
+        res.render("filter",{
+        evento: evento,
+          });
+      }else{ // Não encontrada
+          res.redirect("/");
+      }
+  });
+})
+
+app.get("/eventobyzonasul",(req ,res) => {
+  const ZONA = 'SUL'
+  evento.findAll({
+      where: {zona: ZONA}
+  }).then(evento => {
+      if(evento != undefined){ 
+        res.render("filter",{
+        evento: evento,
+          });
+      }else{ // Não encontrada
+          res.redirect("/");
+      }
+  });
+})
+
+app.get("/eventobyzonanorte",(req ,res) => {
+  const ZONA = 'NORTE'
+  evento.findAll({
+      where: {zona: ZONA}
+  }).then(evento => {
+      if(evento != undefined){ 
+        res.render("filter",{
+        evento: evento,
+          });
+      }else{ // Não encontrada
+          res.redirect("/");
+      }
+  });
+})
+
+app.get("/eventobyzonaoeste",(req ,res) => {
+  const ZONA = 'OESTE'
+  evento.findAll({
+      where: {zona: ZONA}
+  }).then(evento => {
+      if(evento != undefined){ 
+        res.render("filter",{
+        evento: evento,
+          });
+      }else{ // Não encontrada
+          res.redirect("/");
+      }
+  });
+})
+
+
+
+app.get("/eventobyONG",(req ,res) => {
+  const TIPO = 'ONG'
+  evento.findAll({
+      where: {tipoEntidade: TIPO}
+  }).then(evento => {
+      if(evento != undefined){ 
+        res.render("filter",{
+        evento: evento,
+          });
+      }else{ // Não encontrada
+          res.redirect("/");
+      }
+  });
+})
+
+app.get("/eventobyparoquia",(req ,res) => {
+  const TIPO = 'PAROQUIA'
+  evento.findAll({
+      where: {tipoEntidade: TIPO}
+  }).then(evento => {
+      if(evento != undefined){ 
+        res.render("filter",{
+        evento: evento,
+          });
+      }else{ // Não encontrada
+          res.redirect("/");
+      }
+  });
+})
+
+app.get("/eventobyparoquia",(req ,res) => {
+  const TIPO = 'PAROQUIA'
+  evento.findAll({
+      where: {tipoEntidade: TIPO}
+  }).then(evento => {
+      if(evento != undefined){ 
+
+        res.render("filter",{
+        evento: evento,
+
+          });
+
+      }else{ // Não encontrada
+          res.redirect("/");
+      }
+  });
+})
+
+
+app.get("/eventobyPF",(req ,res) => {
+  const TIPO = 'PF'
+  evento.findAll({
+      where: {tipoEntidade: TIPO}
+  }).then(evento => {
+      if(evento != undefined){ 
+
+        res.render("filter",{
+        evento: evento,
+
+          });
+
+      }else{ // Não encontrada
+          res.redirect("/");
+      }
+  });
+})
+
+
+
+
+
+
+
+
 app.post("/salvarentidade",(req, res) => {
 
     var nome = req.body.nome;

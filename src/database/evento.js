@@ -25,6 +25,18 @@ const evento = connection.define('eventos', {
     desc: {
         type: Sequelize.STRING,
         allowNull: false
+    },
+    zona: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    tipo: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    tipoEntidade: {
+        type: Sequelize.STRING,
+        allowNull: false
     }
 })
 
